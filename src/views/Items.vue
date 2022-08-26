@@ -38,6 +38,7 @@
               <thead class="bg-light">
                 <tr>
                   <th scope="col" class="border-0">ID</th>
+                  <th scope="col" class="border-0">Thumb</th>
                   <th scope="col" class="border-0">Categories</th>
                   <th scope="col" class="border-0">Hidden</th>
                   <th scope="col" class="border-0">Timestamp</th>
@@ -49,6 +50,11 @@
               <tbody>
                 <tr v-for="(item, idx) in items" :key="idx">
                   <td>{{ item.ItemId }}</td>
+                  <td>
+                    <div>
+                      <ItemImage :item="item" />
+                    </div>
+                  </td>
                   <td>
                     <div>
                       <d-badge
@@ -100,10 +106,13 @@
 
 <script>
 import moment from "moment";
+import ItemImage from "@/components/common/ItemImage";
 
 const axios = require("axios");
 
 export default {
+  components: { ItemImage },
+
   data() {
     return {
       items: null,

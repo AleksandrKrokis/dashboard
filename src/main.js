@@ -15,6 +15,10 @@ import router from './router';
 import Default from '@/layouts/Default.vue';
 import Login from '@/layouts/Login.vue';
 
+import { init, Lib } from '@/main_custom';
+
+init();
+
 ShardsVue.install(Vue);
 
 Vue.component('default-layout', Default);
@@ -22,6 +26,7 @@ Vue.component('login-layout', Login);
 
 Vue.config.productionTip = false;
 Vue.prototype.$eventHub = new Vue();
+Vue.prototype.$lib = new Lib('ae');
 
 new Vue({
   router,
