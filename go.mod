@@ -1,3 +1,3 @@
-module dashboard
+module github.com/AleksandrKrokis/dashboard
 
-go 1.19
+go 1.18
