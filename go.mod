@@ -1,4 +1,4 @@
-module github.com/gorse-io/dashboard
+module github.com/AleksandrKrokis/dashboard
 
 go 1.17
 
