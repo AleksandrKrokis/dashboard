@@ -28,11 +28,7 @@ export class Lib {
 
 class AELib {
   getItemImage(item) {
-    const itemId = parseInt(item.ItemId);
-    const folder = Math.ceil(itemId / 50);
-    const filename = `${itemId}_1.webp`;
-
-    return `https://content.aemediatraffic.com/thumbs-gay/thumbs/${folder}/${filename}`;
+    return `https://www.machogaytube.com/thumbs/${item.ItemId}`;
   }
 }
 
